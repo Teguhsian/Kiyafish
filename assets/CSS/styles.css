@@ -21,6 +21,10 @@ body {
     color: #841f42;
 }
 
+.color-secondary {
+    color: #9b6a83;
+}
+
 section {
     padding: 50px 0;
     margin-top: 20px;
@@ -173,6 +177,7 @@ section {
     display: flex;
     gap: 24px;
     overflow-x: auto;
+    overflow-y: hidden;
     scroll-behavior: smooth;
     padding-bottom: 16px;
 }
@@ -184,7 +189,9 @@ section {
 /* WRAPPER PER ITEM */
 .card-item-wrapper {
     flex: 0 0 auto;
-    width: 180px; /* ukuran card */
+    width: 180px;
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
 
@@ -202,6 +209,7 @@ section {
     font-size: 14px;
     line-height: 1.5;
     color: #841f42;
+    flex-grow: 1;
 }
 
 /* PANAH */
@@ -262,5 +270,49 @@ section {
 @media (max-width: 768px) {
     .slider-btn {
         display: none;
+    }
+}
+
+.testimonial-section {
+    width: 100%;
+    background-color: white;
+}
+
+/* PANEL KIRI */
+.testimonial-left {
+    background-color: #ead6dd; /* pink soft */
+}
+
+/* TEXT UTAMA */
+.testimonial-quote {
+    max-width: 600px;
+    font-family: "Belleza", serif;
+    font-size: 32px;
+    line-height: 1.4;
+    color: #841f42;
+}
+
+/* AUTHOR */
+.author-name {
+    font-weight: 600;
+    color: #841f42;
+}
+
+.author-role {
+    font-size: 14px;
+    color: #841f42;
+    opacity: 0.8;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .testimonial-quote {
+        font-size: 22px;
+        padding: 20px;
+    }
+
+    .testimonial-left {
+        align-items: center;
+        text-align: center;
     }
 }
